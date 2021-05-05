@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>04</title>
+</head>
+<body>
+    <a href="./">Tornar</a>
+    <hr>
+    <h1>Exercici 4</h1>
+    <div>
+        Crear una funció que accepti un string i retornada aquest string revertit. Nota: Usar funció fletxa (arrow functions), l'operador de prograpación (spread operator) y el mètode .reverse()
+    </div>
+    <hr>
+    <script>
+        const girar = (s)=>{
+            return ([...s].reverse()).reduce((previous,current)=>previous+current);
+        };
+        console.log(girar("DISLEXIA Y PARALELEPÍPEDO"));
+    </script>
+</body>
+</html>
