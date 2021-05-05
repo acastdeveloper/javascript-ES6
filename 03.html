@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>03</title>
+</head>
+<body>
+    <a href="./">Tornar</a>
+    <hr>
+    <h1>Exercici 3</h1>
+    <div>Donat el següent array de strings, mostrar per consola la frase completa usant .reduce()</div>
+    <pre>
+        var epic = ['a', 'long', 'time', 'ago', 'in a', 'galaxy', 'far far', 'away'];
+
+    </pre>
+    <div>
+        <p>Resultat per consola: 'a long time ago in a galaxy far far away'.</p>
+        <p>Nota: no fa falta fer un "join".</p>
+    </div>
+    <hr>
+    <script>
+        var epic = ['a', 'long', 'time', 'ago', 'in a', 'galaxy', 'far far', 'away'];
+        var frase = epic.reduce((previous, current) => previous + " " + current);
+        console.log(frase);
+        /* https://code.tutsplus.com/es/tutorials/how-to-use-map-filter-reduce-in-javascript--cms-26209 */
+    </script>
+</body>
+</html>
