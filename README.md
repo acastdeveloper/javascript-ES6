@@ -4,11 +4,15 @@
 | Temps     | 4-6 dies                                                                                                                                        |
 | Recursos  | https://scrimba.com/g/gintrotoes6                                                                                                               |
 
-### <u>Nivell I</u>
+## <u>Nivell I</u>
 
 Aquest exercici és molt senzill: **es plantegen petits fragments de codi JavaScript ES5, els quals s'han de reescriure per a utilitzar la nomenclatura d'ES6 i resoldre petits reptes mitjançant ES6.**
 
-L'objectiu és repassar els coneixements adquirits d'ES6
+L'objectiu és repassar els coneixements adquirits d'ES6.
+
+
+
+
 
 ### Exercici 1
 
@@ -64,6 +68,8 @@ function greet(who) {
 
 }
 
+
+
 ### Exercici 2
 
 Arregla l'error del següent bloc de codi:
@@ -96,9 +102,13 @@ Resultat per consola: 'a long time ago in a galaxy far far away'
 
 Nota: no fa falta fer un "join".
 
+
+
 ### Exercici 4
 
 Crear una funció que accepti un string i retornada aquest string revertit. Nota: Usar funció fletxa (arrow functions), l'operador de prograpación (spread operator) y el mètode .reverse()
+
+
 
 ### Exercici 5
 
@@ -121,6 +131,8 @@ funtion a() {
    }
 
 }
+
+
 
 ### Exercici 6
 
@@ -158,7 +170,9 @@ var tasks = [
 
 ];
 
-### <u>Nivell II</u>
+
+
+## <u>Nivell II</u>
 
 ### Exercici 7
 
@@ -176,11 +190,15 @@ Per exemple, si l'usuari introdueix 3 i 5:
 3 X 4 = 12
 3 X 5 = 15
 
+
+
 ### Exercici 8
 
-Modificar l'exercici anterior perquè els números s'introdueixin a través d'un formulari (amb validacions), i que la taula de multiplicar la mostri en una taula HTML
+Modificar l'exercici anterior perquè els números s'introdueixin a través d'un formulari (amb validacions), i que la taula de multiplicar la mostri en una taula HTML.
 
-### <u>Nivell III</u>
+
+
+## <u>Nivell III</u>
 
 ### Exercici 9
 
