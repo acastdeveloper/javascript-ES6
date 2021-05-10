@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>09</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+</head>
+
+<body>
+
+    <!--
+    <div class="container">
+        <a href="./">Tornar</a>
+        <hr>
+        <div>
+            <h1>E9</h1>
+            <p>Aquest exercici tracta de crear un cercador. Donada una llista de noms, a l'introduir un nom al cercador
+                només s'han de mostrar aquells que coincideixin.
+            </p>
+            <p>Seria desitjable que vagi filtrant conforme es va omplint el nom. També tenir en compte maquetar la
+                solució
+                final perquè tingui bon aspecte.
+            </p>
+            <p>Code snippet:</p>
+            <pre>
+            &lt;input type="text" id="myInput" onkeyup="filterNames()" placeholder="Buscar nom.." title="Buscar nom"&gt;
+
+            &lt;ul id="myUL"&gt;
+              &lt;li&gt;&lt;a href="#"&gt;Albert&lt;/a&gt;&lt;/li&gt;
+              &lt;li&gt;&lt;a href="#"&gt;Ismael&lt;/a&gt;&lt;/li&gt;
+              &lt;li&gt;&lt;a href="#"&gt;Luis&lt;/a&gt;&lt;/li&gt;
+              &lt;li&gt;&lt;a href="#"&gt;Rubén&lt;/a&gt;&lt;/li&gt;
+              &lt;li&gt;&lt;a href="#"&gt;Jonatan&lt;/a&gt;&lt;/li&gt;
+              &lt;li&gt;&lt;a href="#"&gt;Jake&lt;/a&gt;&lt;/li&gt;
+              &lt;li&gt;&lt;a href="#"&gt;Jose&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        </pre>
+            <hr>
+        </div>
+    </div>
+ -->
+
+    <div class="container">
+
+        <div class="row">
+            <h1 class="display-4 col-12">Cerca-Noms</h1>
+        </div>
+
+        <div class="row">
+            <div class="col-9">
+                <input type="text" id="myInput" placeholder="Buscar nom..." title="Buscar nom"
+                    class="form-control input-lg">
+            </div>
+
+            <div class="col-3">
+                <button class="btn btn-primary col-auto" id="boto">Cercar</button>
+            </div>
+        </div>
+
+
+        <div class="row my-2">
+            <ul id="myUL">
+                <!-- <li><a href="#">Albert</a></li>
+                <li><a href="#">Ismael</a></li>
+                <li><a href="#">Luis</a></li>
+                <li><a href="#">Rubén</a></li>
+                <li><a href="#">Jonatan</a></li>
+                <li><a href="#">Jake</a></li>
+                <li><a href="#">Jose</a></li> -->
+            </ul>
+        </div>
+    </div>
+
+
+
+    <script>
+        const campH = document.getElementById("myInput");
+        const botoH = document.getElementById("boto");
+        const resultH = document.getElementById("myUL");
+
+        let noms = [
+            "Adrià",
+            "Agustí",
+            "Albert",
+            "Alfred",
+            "Àlex",
+            "Andreu",
+            "Arnau",
+            "Baptista",
+            "Bernard",
+            "Bernat",
+            "Biel",
+            "Blai",
+            "Carles",
+            "Dídac",
+            "Eduard",
+            "Enric",
+            "Eribert",
+            "Èric",
+            "Feliu",
+            "Ferran",
+            "Francesc",
+            "Guifré",
+            "Gonçal",
+            "Guillem",
+            "Ignasi",
+            "Jan",
+            "Joan",
+            "Jaume",
+            "Jordi",
+            "Josep",
+            "Llorenç",
+            "Lluc",
+            "Manel",
+            "Maria",
+            "Martí",
+            "Mateu",
+            "Nil",
+            "Nicolau",
+            "Oriol",
+            "Ot",
+            "Pamela",
+            "Pasqual",
+            "Patrici",
+            "Pau",
+            "Pelegrí",
+            "Peregrí",
+            "Pere",
+            "Peret",
+            "Pep",
+            "Pilar",
+            "Plàcid",
+            "Pol",
+            "Príam",
+            "Pròsper",
+            "Providència",
+            "Ricard",
+            "Robert",
+            "Roderic",
+            "Vicenç",
+            "Wenceslao",
+        ];
+
+
+        function d(s) {
+            return s.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+        }
+
+
+        function iterar(s) {
+            console.clear();
+            resultH.innerHTML="";
+            noms.forEach((e)=>{
+                if(d(e).toLowerCase().indexOf(d(s).toLowerCase())!=-1) {
+                    console.log(e);
+                    resultH.innerHTML += `
+                    <li><a href="#">${e}</a></li>
+                    `;
+                }
+            });
+        }
+
+        function main() {
+            let sR = campH.value;
+            // console.log(sR);
+            iterar(sR);
+        }
+
+
+
+        campH.addEventListener("keyup", () => {
+            main();
+        });
+
+        botoH.addEventListener("click", () => {
+            main();
+        });
+
+
+    </script>
+
+</body>
+
+</html>
