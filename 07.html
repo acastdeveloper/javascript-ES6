@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>07</title>
+</head>
+
+<body>
+    <a href="./">Tornar</a>
+    <hr>
+    <div>
+        <h1>E7</h1>
+        <p>Realitzar un programa en ES6, amb al menys una funció.</p>
+        <p>Aquest programa demana a l'usuari dos nombres de l'1 a l'10 (con promp es suficient).</p>
+        <p>Un cop introduïts, es mostra per consola la taula de multiplicar del número 1 que va fins al número 2.</p>
+        <p>Per exemple, si l'usuari introdueix 3 i 5:</p>
+        <pre>
+        3 X 1 = 3
+        3 X 2 = 6
+        3 X 3 = 9
+        3 X 4 = 12
+        3 X 5 = 15
+        </pre>
+    </div>
+    <hr>
+
+    <button id="boto">TAULA MULTIPLICAR</button>
+    <div id="resultat">
+    </div>
+
+    <script>
+        document.getElementById("boto").addEventListener("click", () => {
+            let a = prompt("Operand 1");
+            let b = prompt("Operand 2");
+            let i = 1;
+            while (i <= b) {
+                console.log(`${a} X ${i} = ${a*i}`);
+                i++;
+            }
+        });
+    </script>
+</body>
+
+</html>
