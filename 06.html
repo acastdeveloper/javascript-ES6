@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>06</title>
+</head>
+
+<body>
+    <a href="./">Tornar</a>
+    <hr>
+    <div>
+        <h1>E6</h1>
+        Tenim un array de tasques i volem aconseguir un array que contingui únicament els noms de les tasques.</div>
+    <ul>
+        <li>Usar .forEach() per obtenir aquest array.</li>
+        <li>Usar .map() per obtenir aquest array.</li>
+    </ul>
+    <hr>
+    <pre>
+        var tasks = [
+        {
+           'name' : 'Start React web',
+           'duration' : 120
+        },
+        {
+           'name' : 'Work out',
+           'duration' : 60
+        },
+        {
+           'name' : 'Procrastinate on facebook',
+           'duration' : 240
+        }
+        ];
+    </pre>
+    <hr>
+    <script>
+        const tasksNames = [];
+        const mapTasks = new Map();
+        const tasksNamesMapped = [];
+        const tasks = [
+        {
+           'name' : 'Start React web',
+           'duration' : 120
+        },
+        {
+           'name' : 'Work out',
+           'duration' : 60
+        },
+        {
+           'name' : 'Procrastinate on facebook',
+           'duration' : 240
+        }
+        ];
+
+
+        tasks.forEach(element => {
+            let i=0;
+            tasksNames.push(element.name);
+            mapTasks.set(name = element.name, value=i);
+            i++;
+        });
+
+
+
+        // console.log(tasksNames.length);
+        console.log(tasksNames);
+        console.log(Array.from(mapTasks.keys()));
+
+
+    </script>
+
+</body>
+
+</html>
