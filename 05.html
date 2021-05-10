@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>05</title>
+</head>
+
+<body>
+    <a href="./">Tornar</a>
+    <hr>
+    <div>
+    <h1>E5</h1>
+    Modifica la funció 'a()' per a reemplaçar la promesa per aync/await:</div>
+    <pre>
+
+        function b() {
+            // tasques asíncrones , que triguen una estona..
+        }
+
+        function a() {
+            // Ens esperem que la funció b acabi
+            b().then() => {
+                doMoreWork();
+            }
+        }
+
+    </pre>
+    <hr>
+    <script>
+        function b() {
+            return new Promise((resolved)=>{
+                setTimeout(() => {
+                    resolved(2)
+                }, 6000);
+            });
+        }
+
+        function doMoreWork() {
+            return new Promise((resolved)=>{
+                setTimeout(() => {
+                    resolved(3)
+                }, 3000);
+            });
+        }
+
+        async function a() {
+            // Ens esperem que la funció b acabi
+            const bValor=await b();
+            console.log(bValor);
+            const dMWValor=await doMoreWork();
+            console.log(dMWValor);
+        }
+
+        a();
+    </script>
+</body>
+
+</html>
